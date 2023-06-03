@@ -60,21 +60,21 @@ Etiam condimentum rutrum arcu a sagittis. Quisque auctor mi sit amet nunc ornare
 Suspendisse eleifend, quam in lobortis vestibulum, odio augue facilisis lectus, ut semper elit neque ac sapien. Maecenas a est placerat augue consectetur tincidunt. Praesent auctor, tortor non varius ultrices, risus magna gravida nulla, vitae suscipit purus turpis et elit. Nam mauris est, hendrerit vitae euismod sit amet, egestas sit amet justo. Vivamus dapibus a leo ac sollicitudin. Donec fringilla ac arcu eu molestie. Aliquam bibendum venenatis gravida. Integer dapibus placerat sapien vulputate auctor. Nulla tincidunt vestibulum elit. Ut at malesuada leo, sit amet fermentum est. Duis sit amet libero quis mi fringilla condimentum. Maecenas fringilla tellus ac enim finibus viverra. Proin a posuere ex.`
 
 let words = 0;
-let etCount = 0;
+let et = 0;
 
-let splittedText = text.split(' ');
+let countText = text.split(' ');
 
-for (let i=0; i < splittedText.length; i++) {
-  if(splittedText[i].includes('\n')) {
+for (let i=0; i < countText.length; i++) {
+  if(countText[i].includes('\n')) {
     words++
-  } else if(splittedText[i] === "et" || splittedText[i] === "et.") {
-    etCount++;
+  } else if(countText[i] || text[i]) {
+    et++;
   }
   words++;
  }
 
-console.log('words -->', words);
-console.log('et count  -->', etCount);
+console.log(words);
+console.log(et);
 
 //Bonus 2
 
